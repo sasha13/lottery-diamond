@@ -2,6 +2,7 @@
 /* global ethers task */
 require('@nomiclabs/hardhat-waffle')
 require("hardhat-gas-reporter");
+require("hardhat-tracer");
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -29,5 +30,10 @@ module.exports = {
   },
   gasReporter: {
     enabled: true
+  },
+  networks: {
+    ganache: {
+      url: "http://127.0.0.1:7545",
+    }
   }
 }
